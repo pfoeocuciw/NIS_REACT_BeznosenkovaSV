@@ -1,17 +1,16 @@
-// src/App.tsx
+
 import React, { useMemo, useRef, useState } from "react";
-import type { Movie, Filter, ViewMode } from "./types";          // если types.ts в src/
-import { initialMovies } from "./data/movies";                    // если movies.ts в src/data/
+import type { Movie, Filter, ViewMode } from "./types";
+import { initialMovies } from "./data/movies";
 import { Toolbar } from "./components/Toolbar";
 import { MovieCard } from "./components/MovieCard";
 
 const App: React.FC = () => {
-  // состояния
+
   const [movies, setMovies] = useState<Movie[]>(initialMovies);
   const [filter, setFilter] = useState<Filter>("all");
   const [view, setView] = useState<ViewMode>("grid");
 
-  // значение поиска держим в ref, перерендерим через tick
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [searchTick, setSearchTick] = useState(0);
   const bump = () => setSearchTick((x) => x + 1);
@@ -28,8 +27,8 @@ const App: React.FC = () => {
     return movies
         .filter((m) => (filter === "favorites" ? m.isFavorite : true))
         .filter((m) => (term ? m.title.toLowerCase().includes(term) : true));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [movies, filter, searchTick]); // реагируем на bump(), а не на ref.value напрямую
+
+  }, [movies, filter, searchTick]);
 
   return (
       <div className="min-h-screen bg-gray-50">
