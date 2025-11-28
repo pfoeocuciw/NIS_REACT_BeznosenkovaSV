@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "CyberCat-01",
+    "species": "cat",
+    "mood": "happy",
+    "energy": 90,
+    "level": 3,
+    "avatar": "/avatars/cyber_cat.png"
+  },
+  {
+    "id": 2,
+    "name": "RoboDog-7",
+    "species": "dog",
+    "mood": "neutral",
+    "energy": 60,
+    "level": 2,
+    "avatar": "/avatars/cyber_dog.png"
+  },
+  {
+    "id": 3,
+    "name": "NanoFox-3",
+    "species": "fox",
+    "mood": "tired",
+    "energy": 35,
+    "level": 4,
+    "avatar": "/avatars/cyber_fox.png"
+  },
+  {
+    "id": 4,
+    "name": "DroneBird-X",
+    "species": "bird",
+    "mood": "happy",
+    "energy": 75,
+    "level": 1,
+    "avatar": "/avatars/cyber_bird.png"
+  }
+]
