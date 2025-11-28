@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+#  CyberZoo Dashboard
+Интерактивная панель управления виртуальными кибер-животными  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Безносенкова Софья 
+### БПИ 233
+### тг: @pfoeocuciw
 
-Currently, two official plugins are available:
+## Организация кода
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Проект организован по функциональным модулям:
 
-## React Compiler
+- **components/** - переиспользуемые компоненты интерфейса
+- **context/** - контексты для глобального состояния
+- **hooks/** - кастомные React хуки
+- **data/** - статические данные и конфигурации
+- **pages/** - страницы приложения
+- **styles/** - глобальные стили и темы
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Основные возможности
 
-## Expanding the ESLint configuration
+### Система питомцев
+Каждая карточка питомца содержит:
+- Аватар и имя животного
+- Уровень развития
+- Индикатор настроения
+- Шкалу энергии
+- Панель действий для взаимодействия
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Взаимодействие с питомцами
+Доступные действия:
+- **Кормление** - восстанавливает энергию
+- **Развитие** - повышает уровень питомца
+- **Поддержка** - улучшает настроение
+- **Сброс** - возвращает к начальному состоянию
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Жизненный цикл
+Автоматические процессы:
+- Постепенное уменьшение энергии со временем
+- Случайное изменение настроения
+- Блокировка действий при нулевой энергии
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Мониторинг событий
+Глобальная система логов:
+- Запись всех действий пользователя
+- Отслеживание изменений состояния питомцев
+- История событий в реальном времени
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Фильтрация и поиск
+Инструменты для удобной навигации:
+- Фильтрация животных по видам
+- Быстрый поиск по имени
+- Сортировка по различным параметрам
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Интерфейс
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Приложение использует современный и интуитивно понятный интерфейс:
+- Адаптивный дизайн для разных устройств
+- Плавные анимации взаимодействий
+- Визуальные индикаторы состояния
+- Темная и светлая темы оформления
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
