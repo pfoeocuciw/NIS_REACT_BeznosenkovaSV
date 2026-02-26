@@ -1,0 +1,39 @@
+.layoutRoot {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    height: 100%;
+}
+
+.sidebar {
+    border-right: 1px solid var(--border);
+    padding: 16px;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 56px 1fr;
+    min-width: 0;
+}
+
+.header {
+    border-bottom: 1px solid var(--border);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    padding: 16px;
+}
+.nav {
+    display: grid;
+    gap: 8px;
+    margin-top: 12px;
+}
+.nav a {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--card);
+}

@@ -1,0 +1,38 @@
+{
+  "app": { "title": "Admin Panel" },
+  "nav": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Sign in",
+    "invalid": "Invalid username or password"
+  },
+  "products": {
+    "title": "Products catalog",
+    "search": "Search by title",
+    "empty": "No products found",
+    "price": "Price",
+    "rating": "Rating",
+    "category": "Category"
+  },
+  "settings": {
+    "title": "Settings",
+    "theme": "Theme",
+    "lang": "Language",
+    "pageSize": "Page size"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "notFound": "Page not found"
+  }
+}
