@@ -1,0 +1,1 @@
+export { I18nSync } from "./I18nProvider";
